@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap");
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --Primary-800: #074c83;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Epilogue", sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  width: 80px;
+  margin-right: 10px;
+}
+
+header .logo-text {
+  color: var(--Primary-800);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #0070f3;
+}
+
+.nav-right a {
+  margin: 0 10px;
+}
+
+.nav-right a.sign-up {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 4px;
+}
+
+.nav-right a.sign-in {
+  padding: 10px 20px;
+  border: 1px solid #0070f3;
+  color: #0070f3;
+  border-radius: 4px;
+}
+
+.nav-right a:hover {
+  opacity: 0.8;
+}
+
+.footer {
+  display: flex;
+  height: 60px;
+  padding: 22px 575px 18px 446px;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: var(--Primary-800);
+  width: 100%;
+  justify-content: center;
+}
+
+.footer p {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+}
+
+/* Global reset to avoid margin/padding issues */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer styles */
+footer {
+  background-color: #4285f4; /* Adjust footer background color */
+  color: white; /* Text color */
+  text-align: center; /* Center-align text */
+  padding: 20px 0; /* Padding for top and bottom */
+  position: relative;
+  bottom: 0;
+  width: 100%; /* Make the footer full width */
+}
+
+footer p {
+  font-size: 14px; /* Text size */
+  margin: 0;
+  line-height: 1.5; /* Line height to adjust text spacing */
+}
+
+/* Responsive footer for smaller screens */
+@media (max-width: 768px) {
+  footer {
+    padding: 10px 0; /* Reduce padding for smaller screens */
+  }
+
+  footer p {
+    font-size: 12px; /* Smaller text for mobile */
+  }
+}
+
+/* Container for the page */
+.container {
+  display: flex;
+  justify-content: space-between; /* Spread content equally between left and right */
+  align-items: center; /* Vertically center both sides */
+  padding: 40px 20px; /* Add padding around the content */
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container on the page */
+}
+
+/* Left-side (Login Form + Sponsors) */
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content at the top */
+  gap: 40px; /* Add spacing between login form and sponsors */
+  padding-right: 40px; /* Padding between the form and the image */
+}
+
+/* Login Form Styling */
+.login-form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+}
+
+.login-form h2 {
+  font-size: 36px;
+  color: #4285f4;
+  margin-bottom: 30px;
+}
+
+.login-form label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #357ae8;
+}
+
+.login-form p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-form a {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+/* Sponsor Section */
+.sponsors {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sponsors h3 {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sponsors img {
+  height: 40px; /* Size of sponsor logos */
+  margin-right: 10px;
+}
+
+/* Right-side (Banner Image) */
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right-side img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional border radius to match the design */
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .left-side,
+  .right-side {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .right-side {
+    margin-top: 20px;
+  }
+
+  .login-form {
+    width: 100%; /* Ensure form fits full width on small screens */
+  }
+}
