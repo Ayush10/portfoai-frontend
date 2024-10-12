@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    flex-direction: row; /* Side by side layout for main content and banner */
+    justify-content: space-between; /* Space between the main content and banner */
+    align-items: flex-start; /* Aligns items to the top */
+    padding: 20px;
+}
+
+.leftSide {
+    flex: 3; /* Takes 3 parts of the space */
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+}
+
+.rightSide {
+    flex: 2; /* Takes 2 parts of the space, smaller than left side */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    margin-left: -20px;
+}
+
+.hero {
+    text-align: left; /* Aligns the text to the left */
+    padding: 20px;
+}
+
+.heroTitle {
+    font-size: 16px; /* Reduced from 24px to 18px */
+    color:#4169E1; /* Sky blue color */
+    margin-bottom: 20px;
+}
+.heroSubTitle {
+    font-size: 22px; /* Main font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .and {
+    color: black; /* 'and' stays black */
+    font-weight: bold;
+  }
+  
+  .highlight {
+    color: #4169E1; /* 'Get Amazing Profit' is blue */
+  }
+
+  .heroDescription {
+    margin-top: 20px;
+    font-size: 14px; /* Adjust the size as needed */
+    line-height: 1.5; /* Optional: adjust line spacing for readability */
+    color: #444; /* Optional: set text color */
+    margin-bottom: 20px;
+  }
+
+.buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 10px; /* Space between buttons */
+}
+
+.btnPrimary {
+    padding: 10px 20px;
+    border: none;
+    color: white; /* Text color */
+    background-color: #4169E1; /* Background color */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for button */
+    font-size: 16px; /* 
+}
+
+.btnPrimary:hover {
+    background-color: darkblue; /* Slightly darker blue on hover */
+}
+
+.btnSecondary {
+    padding: 10px 20px; /* Adjust padding for button size */
+    /*border: 2px solid #4169E1; *//* Blue border */
+    color: #4169E1; /* Text color */
+    background-color: white; /* White background */
+    cursor: pointer;
+    border-radius: 5px; /* Optional: rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.btnSecondary:hover {
+    /*background-color: lightblue*/ /* Light blue background on hover */
+    color: white; /* Text color turns white on hover */
+}
+
+.sponsor {
+    margin-top: auto; /* Pushes the sponsor to the bottom of the left side */
+    padding: 10px;
+    text-align: left; /* Aligns sponsor text to the left */
+}
